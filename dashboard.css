@@ -1,0 +1,123 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  color: white;
+}
+
+/* HEADER */
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+  font-size: 1.5rem;
+}
+
+.notes-btn {
+  text-decoration: none;
+  background: #6366f1;
+  padding: 8px 14px;
+  border-radius: 10px;
+  color: white;
+}
+
+/* TRACKERS */
+.tracker, .gamification {
+  display: flex;
+  justify-content: space-around;
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 15px;
+  background: rgba(255,255,255,0.05);
+}
+
+.gamification div {
+  text-align: center;
+}
+
+/* GRID */
+.main-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin: 1rem;
+}
+
+.card {
+  background: rgba(255,255,255,0.05);
+  padding: 1.5rem;
+  border-radius: 15px;
+}
+
+/* TIMER */
+.circle {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: conic-gradient(#6366f1 0%, #1e293b 0%);
+}
+
+.inner-circle {
+  width: 170px;
+  height: 170px;
+  background: #0f172a;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#timeDisplay {
+  font-size: 2rem;
+}
+
+/* BUTTONS */
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+button {
+  background: #6366f1;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+}
+
+/* TASKS */
+#taskForm {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+#taskForm input {
+  flex: 1;
+  padding: 8px;
+  border-radius: 8px;
+  border: none;
+}
+
+#taskList li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255,255,255,0.1);
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 10px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .main-grid {
+    grid-template-columns: 1fr;
+  }
+}

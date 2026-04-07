@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Studify Dashboard</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="dashboard.css">
+</head>
+
+<body>
+
+<header class="header">
+  <span>📊 Studify Dashboard</span>
+  <a href="notes.html" class="notes-btn">📒 Notes</a>
+</header>
+
+<!-- TRACKER -->
+<section class="tracker">
+  <div>
+    <p>Study Time</p>
+    <h2 id="studyTime">0 min</h2>
+  </div>
+  <div>
+    <p>Tasks Done</p>
+    <h2 id="tasksDone">0</h2>
+  </div>
+</section>
+
+<!-- GAMIFICATION -->
+<section class="gamification">
+  <div>
+    <p>🔥 Streak</p>
+    <h2 id="streakCount">0 days</h2>
+  </div>
+  <div>
+    <p>⭐ XP</p>
+    <h2 id="xpCount">0</h2>
+  </div>
+</section>
+
+<!-- MAIN -->
+<section class="main-grid">
+
+  <!-- TIMER -->
+  <div class="card">
+    <h2>⏰ Focus Timer</h2>
+
+    <div class="circle">
+      <div class="inner-circle">
+        <span id="timeDisplay">25:00</span>
+      </div>
+    </div>
+
+    <div class="buttons">
+      <button onclick="startTimer()">Start</button>
+      <button onclick="pauseTimer()">Pause</button>
+      <button onclick="resetTimer()">Reset</button>
+    </div>
+  </div>
+
+  <!-- TASKS -->
+  <div class="card">
+    <h2>📝 Tasks</h2>
+
+    <form id="taskForm">
+      <input type="text" id="taskInput" placeholder="Task..." required>
+      <input type="number" id="taskSets" placeholder="Sets" min="1" required>
+      <button type="submit">Add</button>
+    </form>
+
+    <p id="progressText">0 / 0 completed</p>
+    <ul id="taskList"></ul>
+  </div>
+
+</section>
+
+<script src="dashboard.js"></script>
+</body>
+</html>
